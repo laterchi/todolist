@@ -2,15 +2,23 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodoListModule } from 'src/app/todo-list/todo-list.module';
+import { TimelineModule } from 'primeng/timeline';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodoListComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    TodoListModule,
+    TimelineModule,
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

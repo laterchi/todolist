@@ -3,15 +3,17 @@ Copyright 2021 Kingland Systems Corporation. All Rights Reserved.
 */
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TodoListComponent } from 'src/app/todo-list/todo-list.component';
 
 
 const routes: Routes = [
   {
     path: 'todo',
-    component: TodoListComponent,
+    loadChildren: () => import('./todo-list/todo-list.module').then(m => m.TodoListModule),
   },
-  {path: '**', component: TodoListComponent}
+  {
+    path: '**',
+    loadChildren: () => import('./todo-list/todo-list.module').then(m => m.TodoListModule),
+  },
 ];
 
 

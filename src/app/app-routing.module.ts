@@ -1,6 +1,3 @@
-/*
-Copyright 2021 Kingland Systems Corporation. All Rights Reserved.
-*/
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -8,11 +5,15 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'todo',
-    loadChildren: () => import('./todo-list/todo-list.module').then(m => m.TodoListModule),
+    loadChildren: () => import('./page/todo-list/todo-list.module').then(m => m.TodoListModule),
+  },
+  {
+    path: 'help',
+    loadChildren: () => import('./page/help/help.module').then(m => m.HelpModule),
   },
   {
     path: '**',
-    loadChildren: () => import('./todo-list/todo-list.module').then(m => m.TodoListModule),
+    loadChildren: () => import('./page/todo-list/todo-list.module').then(m => m.TodoListModule),
   },
 ];
 

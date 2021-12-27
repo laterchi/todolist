@@ -1,0 +1,28 @@
+@import 'node_modules/primeflex/src/variables';
+@import 'node_modules/primeflex/src/spacing';
+
+:host {
+  ::ng-deep {
+    .navbar-inverse {
+      background-color: #222;
+    }
+
+    .navbar .navbar-fixed-top {
+      background-color: red;
+      height: 30px;
+    }
+
+    .sidebar {
+      position: fixed;
+      z-index: 1000;
+      display: block;
+      width: 300px;
+    }
+
+    .main {
+      padding-top: 40px;
+      padding-right: 40px;
+      padding-left: 300px;
+    }
+  }
+}
